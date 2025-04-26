@@ -1,0 +1,16 @@
+@use "../abstract/variables" as *;
+@use "../abstract/mixin" as *;
+
+.btn {
+  background-color: $black-color;
+  width: 188px;
+  height: 48px;
+  border-radius: $base-border-radius + 3px;
+  transition: $main-transition*1.5;
+  cursor: pointer;
+  @include centring;
+
+  &:hover {
+    transform: scale(0.9);
+  }
+}
