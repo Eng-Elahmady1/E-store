@@ -1,0 +1,85 @@
+@use "../abstract/variables" as *;
+
+@media (max-width: 991px) {
+  header {
+    .container {
+      .toggle {
+        display: flex !important;
+        color: $black-color;
+      }
+
+      .input,
+      .links,
+      .icons {
+        display: none !important;
+      }
+
+      .links {
+        position: absolute;
+        top: 56px;
+        right: 0;
+        width: 100%;
+        background: #2d2d2d;
+        display: block !important;
+        z-index: 999;
+
+        ul {
+          flex-direction: column !important;
+          align-items: flex-start !important;
+          margin: auto;
+          padding: 20px 0;
+
+          li {
+            &::before {
+              display: none !important;
+            }
+
+            a {
+              color: $white-color;
+              & {
+                &.active {
+                  color: $white-color;
+                }
+              }
+
+              &:hover {
+                color: $white-color;
+                font-weight: 500;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// Start Tab Mobile
+.tab-mobile {
+  display: block;
+}
+.landing {
+  .container {
+    .content {
+      text-align: center;
+      margin: 20px 0;
+
+      h3 {
+        font-size: $base-font-size * 5 !important;
+      }
+      p {
+        font-size: $base-font-size * 2;
+      }
+
+      .btn {
+        margin: auto;
+      }
+    }
+
+    .image {
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+}

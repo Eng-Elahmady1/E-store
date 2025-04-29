@@ -47,5 +47,11 @@ a {
 }
 
  // Input Style
-
+  input{
+    padding: $base-padding;
+    outline: none;
+    background-color: $bg-color;
+    border-radius: $base-border-radius;
+    width: 100%;
+  }
  // Owl Slider

@@ -53,4 +53,240 @@ ul {
 a {
   text-decoration: none;
   outline: none;
+}
+
+input {
+  padding: 10px;
+  outline: none;
+  background-color: #F6F6F6;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.toggle {
+  flex-direction: column;
+  gap: 7px;
+  cursor: pointer;
+}
+.toggle span {
+  background-color: #000000;
+  width: 35px !important;
+  height: 3px;
+  display: inline-block;
+  transition: all 0.2s ease;
+  border-radius: 4px;
+  position: relative;
+}
+.toggle:hover span:nth-child(2) {
+  opacity: 0;
+}
+.toggle:hover span:first-child {
+  transform: rotate(45deg);
+  top: 10px;
+}
+.toggle:hover span:last-child {
+  transform: rotate(-45deg);
+  top: -10px;
+}
+
+header {
+  padding: 15px 0;
+}
+header .container .toggle {
+  display: none;
+}
+header .container .logo img {
+  width: 70px;
+}
+header .container .input {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #F6F6F6;
+  padding: 0px 30px;
+  height: 45px;
+  border-radius: 10px;
+}
+header .container .input input {
+  border: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .container .input input::-moz-placeholder {
+  color: #656565;
+}
+header .container .input input::placeholder {
+  color: #656565;
+}
+header .container .input i {
+  color: #656565;
+  position: absolute;
+  left: 10px;
+}
+header .container .links li {
+  position: relative;
+}
+header .container .links li a {
+  color: #A4A4A4;
+  font-size: 18px;
+  transition: 0.6s;
+  padding: 5px;
+  display: inline-block;
+  transition: 0.6s;
+}
+header .container .links li a.active {
+  color: #000000;
+}
+header .container .links li a:hover {
+  color: #000000;
+  font-weight: 500;
+}
+header .container .links li::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  background-color: rgba(164, 164, 164, 0.2392156863);
+  width: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  transition: 0.3s;
+  z-index: -9;
+  border-radius: 5px;
+}
+header .container .links li:hover::before {
+  width: 100%;
+}
+header .container .icons ul a {
+  color: #000000;
+  font-size: 17px;
+}
+
+.tab-mobile {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 9999;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding: 0 10px;
+  display: none;
+}
+.tab-mobile ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.tab-mobile ul li a {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  position: relative;
+  top: -15px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #000000;
+}
+
+.landing {
+  background-color: #211c24;
+}
+.landing .content p:first-child {
+  font-size: 25px;
+  color: #A4A4A4;
+  animation: control-width 3s 0.2s both;
+}
+.landing .content h3 {
+  font-size: 100px;
+  font-weight: 100;
+  letter-spacing: 3px;
+  margin: 15px 0;
+  animation: control-width 3s 0.3s both;
+}
+.landing .content h3 span {
+  font-weight: 600;
+}
+.landing .content p {
+  color: #A4A4A4;
+  font-size: 18px;
+  animation: control-width 3s 0.4s both;
+}
+.landing .content .btn {
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  margin-top: 15px;
+  animation: control-width 3s 0.5s both;
+}
+.landing .image {
+  overflow: hidden;
+}
+.landing .image img {
+  animation: img-rotate 3s 0.2s;
+}
+
+@media (max-width: 991px) {
+  header .container .toggle {
+    display: flex !important;
+    color: #000000;
+  }
+  header .container .input,
+  header .container .links,
+  header .container .icons {
+    display: none !important;
+  }
+  header .container .links {
+    position: absolute;
+    top: 56px;
+    right: 0;
+    width: 100%;
+    background: #2d2d2d;
+    display: block !important;
+    z-index: 999;
+  }
+  header .container .links ul {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    margin: auto;
+    padding: 20px 0;
+  }
+  header .container .links ul li::before {
+    display: none !important;
+  }
+  header .container .links ul li a {
+    color: #ffffff;
+  }
+  header .container .links ul li a.active {
+    color: #ffffff;
+  }
+  header .container .links ul li a:hover {
+    color: #ffffff;
+    font-weight: 500;
+  }
+}
+.tab-mobile {
+  display: block;
+}
+
+.landing .container .content {
+  text-align: center;
+  margin: 20px 0;
+}
+.landing .container .content h3 {
+  font-size: 50px !important;
+}
+.landing .container .content p {
+  font-size: 20px;
+}
+.landing .container .content .btn {
+  margin: auto;
+}
+.landing .container .image {
+  text-align: center;
 }/*# sourceMappingURL=main.css.map */
