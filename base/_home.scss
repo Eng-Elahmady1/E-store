@@ -555,11 +555,30 @@ footer {
 
     .socials {
       li {
-        i {
-          color: $white-color;
-          transition: $main-transition;
-          &:hover {
-            transform: scale(1.4);
+        a {
+          width: 40px;
+          height: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: $base-border-radius*2;
+          transition: $main-transition*2;
+          i {
+            color: $white-color;
+          }
+          &:hover{
+            &.twitter{
+              background-color:#1DA1F2;
+            }
+            &.tiktok{
+              background-color:#ff0050;
+            }
+            &.facebook{
+              background-color:#1877F2;
+            }
+            &.instagram{
+              background-color:#833AB4;
+            }
           }
         }
       }
