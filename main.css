@@ -640,6 +640,29 @@ footer .Assistance ul li:hover {
     transform: rotateY(0) translateY(0);
   }
 }
+.product .container .breadcrumb-item + .breadcrumb-item::before {
+  padding: 0 10px;
+}
+.product .container .brand .btn {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.product .container .brand .btn i {
+  transition: 0.3s;
+}
+.product .container .brand .btn.collapsed i {
+  transform: rotate(180deg);
+}
+.product .container .brand .btn:hover {
+  transform: scale(1) !important;
+}
+.product .container .brand .btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
 @media (max-width: 990px) {
   header .container .input,
   header .container .links,
