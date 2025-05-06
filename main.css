@@ -533,7 +533,7 @@ header .container .icons ul a {
 }
 
 .sale {
-  background-image: url(../images/Banner.png);
+  background-image: url(./images/Banner.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
