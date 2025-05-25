@@ -14,14 +14,14 @@
     border-radius: 4px;
     position: relative;
   }
-  &:hover span:nth-child(2) {
+  &.active span:nth-child(2) {
     opacity: 0;
   }
-  &:hover span:first-child {
+  &.active span:first-child {
     transform: rotate(45deg);
     top: 10px;
   }
-  &:hover span:last-child {
+  &.active span:last-child {
     transform: rotate(-45deg);
     top: -10px;
   }

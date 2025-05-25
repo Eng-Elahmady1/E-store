@@ -54,11 +54,6 @@
       .toggle {
         display: flex !important;
         color: $black-color;
-        &:focus + .links {
-          transform: translate(0%) !important;
-          visibility: visible;
-          opacity: 1;
-        }
       }
     }
   }

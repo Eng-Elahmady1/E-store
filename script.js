@@ -6,7 +6,6 @@ $(window).on("load", function () {
     $(".loading").delay(1000).fadeOut(500);
   });
   $("body").css("overflow-y", "auto");
-
 });
 
 $(document).ready(function () {
@@ -27,3 +26,28 @@ $(document).ready(function () {
     },
   });
 });
+
+$(document).ready(function () {
+  $(document).on("click", ".toggle", function () {
+    $(".toggle").toggleClass("active");
+    $(".links").toggleClass("back");
+  });
+});
+
+// Pagination
+window.onload = function () {
+  var paginationPage = parseInt($(".cdp").attr("actpage"), 10);
+  $(".cdp_i").on("click", function () {
+    var go = $(this).attr("href").replace("#!", "");
+    if (go === "+1") {
+      paginationPage++;
+    } else if (go === "-1") {
+      paginationPage--;
+    } else {
+      paginationPage = parseInt(go, 10);
+    }
+    $(".cdp").attr("actpage", paginationPage);
+  });
+};
+
+

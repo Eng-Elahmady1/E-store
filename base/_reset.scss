@@ -1,6 +1,6 @@
 @use "../abstract/variables" as *;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 * {
   box-sizing: border-box;
@@ -22,7 +22,7 @@ body {
 
 ::-webkit-scrollbar-thumb {
   background-color: $text-color;
-  border-radius: $base-border-radius*4;
+  border-radius: $base-border-radius * 4;
 
   &:hover {
     background-color: $text-color;
@@ -46,12 +46,17 @@ a {
   outline: none;
 }
 
- // Input Style
-  input{
-    padding: $base-padding;
-    outline: none;
-    background-color: $bg-color;
-    border-radius: $base-border-radius;
-    width: 100%;
-  }
- // Owl Slider
+// Input Style
+input {
+  padding: $base-padding;
+  outline: none;
+  background-color: $bg-color;
+  border-radius: $base-border-radius;
+  width: 100%;
+}
+
+.back {
+  transform: translate(0%) !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
